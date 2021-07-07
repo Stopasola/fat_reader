@@ -47,9 +47,13 @@ int main(){
     printf("Setores por track (sectors_per_track)%hu\n", boot_record.sectors_per_track);
 
     // First fat Sector
-    printf("First Sector in the FAT %hu\n", boot_record.sectors_per_track);
+    printf("First Sector in the FAT %hu\n", boot_record.reserved_sector_count);
 
 
+    // First fat Sector
+    printf("First Sector in the FAT %hu\n", boot_record.reserved_sector_count);
+
+    first_data_sector = fat_boot->reserved_sector_count + (fat_boot->table_count * fat_size) +
 
     return 0;
 }
